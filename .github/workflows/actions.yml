@@ -20,4 +20,5 @@ jobs:
   runs-more-useful-actions:
     runs-on: ubuntu-latest
     steps:
-      - name:
+      - name: some name actions
+        run: echo "I love you"
