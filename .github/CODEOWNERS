@@ -1,4 +1,4 @@
 *.js @waddprog
 *.js @waddprog
-*.yml @waddprogkj
+*.yml @waddprog
 /server/ @waddprog
