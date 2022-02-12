@@ -1,0 +1,4 @@
+*.js @waddprog
+*.js @waddprog
+*.yml @waddprog
+/server/ @waddprog
