@@ -6,13 +6,18 @@ jobs:
   runs-some-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: simple js actions 
+      - name: list files
+        run: |
+          pwd
+          ls
+      - name: simple js actions
         id: greet
         uses: actions/hello-world-javascript-action@v1
-        with: 
+        with:
           who-to-greet: Wadson
-      - name: Log greeting time 
-        run: echo "${{steps.greet.outputs.time}}"     
-
-      
-
+      - name: Log greeting time
+        run: echo "${{steps.greet.outputs.time}}"
+  runs-more-useful-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
