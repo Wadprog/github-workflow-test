@@ -26,3 +26,15 @@ jobs:
         run: |
           pwd
           ls
+  create-issues: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: create issue using Rest Api 
+        run: | 
+        curl --request post \ 
+        --url https://api.githuh.com/repos/${{github.repository}}/issues \
+        --header 'authorization: Bearer${{secrets.GITHUB_TOKEN}}' \
+        --header 'content-type: application/json'\
+        --data '{
+        "title":"Automated issue for commit ${{github.sha}}",
+        "body":"This issue was automatically created by the github action workflow **${{github.workflow}}**.\n\n The commit hash was : _${{github.sha}}_."}'
